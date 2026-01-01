@@ -25,10 +25,10 @@ function App() {
   }, [length, numberAllowed, charAllowed])
 
   return (
-    <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 bg-gray-100">
+    <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 bg-blue-300">
       <h1 className="text-xl font-semibold mb-4">Password Generator</h1>
 
-      <div className="flex shadow rounded-lg overflow-hidden mb-4">
+      <div className="flex shadow rounded-lg overflow-hidden mb-9">
         <input
           type="text"
           value={password}
@@ -38,7 +38,7 @@ function App() {
         />
       </div>
 
-      <div className="flex items-center gap-4 mb-4">
+      <div className="flex items-center gap-5 mb-6">
         <label className="flex items-center gap-2">
           <input type="checkbox" checked={numberAllowed} onChange={e => setNumberAllowed(e.target.checked)} />
           <span>Include numbers</span>
@@ -49,11 +49,11 @@ function App() {
         </label>
       </div>
 
-      <div className="flex items-center gap-4">
-        <label className="flex items-center gap-2">Length:
+      <div className="flex items-center gap-3">
+        <label className="flex items-center gap-1">Length:
           <input type="number" min={4} max={64} value={length} onChange={e => setLength(Number(e.target.value))} className="w-20 ml-2 p-1 border" />
         </label>
-        <button onClick={passwordgen} className="ml-auto bg-blue-500 text-white px-4 py-2 rounded">Generate</button>
+        <button onClick={passwordgen} className="ml-auto bg-blue-500 text-white px-4 py-3 rounded ">Generate</button>
       </div>
     </div>
   )
